@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productivity Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Daily Tracker</h1>
+    <div class="container">
+        <!-- Dark/Light Mode Toggle Button -->
+        <button id="theme-toggle" class="theme-toggle-btn">🌙 Dark Mode</button>
+
+        <!-- Main Content -->
+        <div class="content">
+            
+            <!-- Task Management Section -->
+            <section class="task-section">
+                <h2>Task Management</h2>
+                <div>
+                    <input type="text" id="task-input" placeholder="Enter a new task..." />
+                    <button id="add-task-btn">Add Task</button>
+                </div>
+                <ul id="task-list"></ul>
+            </section>
+
+            <section class="progress-section">
+                <h2>Progress Tracker</h2>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <p id="progress-text">0% Completed</p>
+            </section>
+            
+
+            <!-- Motivational Quote Section -->
+            <section class="quote-section">
+                <h2>Daily Motivational Quote</h2>
+                <blockquote id="quote">
+                    "The future depends on what you do today." – Mahatma Gandhi
+                </blockquote>
+            </section>
+        </div>
+
+        <footer>
+            <p>Created by Second Year Dept | &copy; 2025</p>
+        </footer>
+    </div>
+   <!-- Customization Panel -->
+<div id="customization-panel" class="customization-panel">
+    <h2>Customize Your Theme</h2>
+    <div>
+        <label for="theme-color">Select Theme Color:</label>
+        <input type="color" id="theme-color" value="#1e90ff">
+    </div>
+    <div>
+        <label for="font-select">Select Font:</label>
+        <select id="font-select">
+            <option value="Arial, sans-serif">Arial</option>
+            <option value="Verdana, sans-serif">Verdana</option>
+            <option value="Georgia, serif">Georgia</option>
+            <option value="Times New Roman, serif">Times New Roman</option>
+        </select>
+    </div>
+    <button id="apply-customizations">Apply Customizations</button>
+</div>
+
+
+
+    
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

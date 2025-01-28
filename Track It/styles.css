@@ -1,0 +1,392 @@
+h1{
+    text-align: center;
+    color: black;
+    font-family: sans-serif;
+}
+    /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Container */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Light blue background */
+    color: #333;
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100vh;
+    padding: 20px;
+}
+
+/* Dark/Light Mode Button (fixed on the top right) */
+.theme-toggle-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+    border: none;
+    background-color: #5cb85c; /* Green button */
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.theme-toggle-btn:hover {
+    background-color: #4cae4c;
+}
+
+/* Content Layout */
+.content {
+    flex: 1;
+    padding: 20px;
+    width: 100%;
+}
+
+/* Calendar Section */
+.calendar-section {
+    background-color: #ffffff; /* White background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+#calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 columns for each day of the week */
+    gap: 5px;
+}
+
+#calendar div {
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #f0f8ff;
+    border-radius: 5px;
+}
+
+#calendar div:hover {
+    background-color: #1e90ff;
+    color: white;
+}
+
+/* Task Section */
+.task-section {
+    background-color: #ffffff; /* White background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 75%;
+    border: 1px solid #1e90ff; /* Blue border */
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 20px;
+}
+
+li {
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Progress Tracker */
+.progress-section {
+    background-color: #ffffff; /* White background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.progress-bar-container {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 5px;
+    height: 25px;
+    overflow: hidden;
+    margin-top: 15px;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0;
+    background-color: #1e90ff; /* Blue progress bar */
+    transition: width 0.3s;
+}
+
+/* Quote Section */
+.quote-section {
+    background-color: #ffffff; /* White background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+blockquote {
+    font-size: 20px;
+    color: #555;
+    border-left: 4px solid #1e90ff; /* Blue border */
+    padding-left: 15px;
+    margin-left: 0;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 40px;
+    color: #888;
+}
+
+/* Dark Mode Styling */
+body.dark-mode {
+    background-color: #333; /* Dark background */
+    color: #fff;
+}
+
+body.dark-mode header {
+    background-color: #1c3d63; /* Dark blue header */
+}
+
+body.dark-mode .task-section,
+body.dark-mode .progress-section,
+body.dark-mode .quote-section {
+    background-color: #444; /* Dark background for sections */
+    color: #fff;
+}
+
+body.dark-mode button {
+    background-color: #6c757d; /* Darker button color */
+}
+
+body.dark-mode button:hover {
+    background-color: #5a6268; /* Hover effect */
+}
+
+body.dark-mode .progress-bar {
+    background-color: #4b9cd3; /* Lighter blue for progress bar */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content {
+        width: 100%;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    input[type="text"] {
+        width: 60%;
+    }
+
+    li {
+        font-size: 16px;
+    }
+}
+
+
+.customization-panel {
+    position: absolute;
+    bottom: 20px; /* Position it 20px from the bottom */
+    right: 20px; /* Position it 20px from the right */
+    background-color: #fff;
+    padding: 10px; /* Reduce padding to make it smaller */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: 150px; /* Set a smaller width */
+}
+
+
+.customization-panel h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.customization-panel div {
+    margin-bottom: 10px;
+}
+
+.customization-panel label {
+    font-size: 14px;
+}
+
+.customization-panel input,
+.customization-panel select {
+    padding: 8px;
+    width: 100%;
+    border-radius: 4px;
+    margin-top: 5px;
+}
+
+#apply-customizations {
+    margin-top: 15px;
+    padding: 10px;
+    border: none;
+    background-color: #1e90ff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#apply-customizations:hover {
+    background-color: #4cae4c;
+}
+
+/* Default theme color */
+:root {
+    --theme-color: #1e90ff; /* Default blue */
+    --font-family: Arial, sans-serif; /* Default font */
+}
+
+/* Apply theme color in various places */
+body {
+    font-family: var(--font-family);
+    background-color: #f0f8ff;
+    color: #333;
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    background-color: var(--theme-color);
+}
+
+.theme-toggle-btn,
+button {
+    background-color: var(--theme-color);
+}
+
+button:hover {
+    background-color: darken(var(--theme-color), 10%);
+}
+
+.progress-bar {
+    background-color: var(--theme-color);
+}
+
+.task-section,
+.progress-section,
+.quote-section {
+    background-color: var(--theme-color);
+}
+/* Default values for new customization options */
+:root {
+    --theme-color: #1e90ff; /* Default blue */
+    --font-family: Arial, sans-serif; /* Default font */
+    --header-bg-color: #1c3d63; /* Default header color */
+    --dark-btn-color: #5cb85c; /* Default dark mode button color */
+}
+
+/* Apply customization to the header */
+header {
+    background-color: var(--header-bg-color); /* Dynamic header color */
+}
+
+/* Apply customization to the Dark/Light Mode button */
+.theme-toggle-btn {
+    background-color: var(--dark-btn-color); /* Dynamic button color */
+}
+
+.theme-toggle-btn:hover {
+    background-color: darken(var(--dark-btn-color), 10%);
+}
+
+/* Apply theme color to other elements as before */
+body {
+    font-family: var(--font-family);
+    background-color: #f0f8ff;
+    color: #333;
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    background-color: var(--theme-color);
+}
+
+button {
+    background-color: var(--theme-color);
+}
+
+button:hover {
+    background-color: darken(var(--theme-color), 10%);
+}
+
+.progress-bar {
+    background-color: var(--theme-color);
+}
+
+.task-section,
+.progress-section,
+.quote-section {
+    background-color: var(--theme-color);
+}
+/* Progress Bar Container */
+.progress-bar-container {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 5px;
+    height: 25px;
+    overflow: hidden;
+    margin-top: 15px;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0;
+    background-color: #1e90ff; /* Blue progress bar */
+    transition: width 0.3s ease-in-out;
+}
+
+/* Progress Text */
+#progress-text {
+    font-size: 18px;
+    margin-top: 10px;
+    text-align: center;
+    color: #333;
+}
+
+/* Completed Task Styling */
+.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+
